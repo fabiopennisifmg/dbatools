@@ -154,7 +154,7 @@ function Get-DbaAgentJob {
             }
 
             foreach ($agentJob in $jobs) {
-                $defaults = 'ComputerName', 'InstanceName', 'SqlInstance', 'Name', 'Category', 'OwnerLoginName', 'CurrentRunStatus', 'CurrentRunRetryAttempt', 'IsEnabled as Enabled', 'LastRunDate', 'LastRunOutcome', 'HasSchedule', 'OperatorToEmail', 'DateCreated as CreateDate'
+                $defaults = 'ComputerName', 'InstanceName', 'SqlInstance', 'Name', 'Category', 'OwnerLoginName', 'CurrentRunStatus', 'CurrentRunRetryAttempt', 'IsEnabled as Enabled', 'LastRunDate', 'LastRunOutcome', 'HasSchedule', 'OperatorToEmail', 'DateCreated as CreateDate', 'DateLastModified as ModifyDate'
 
                 $currentJobId = $agentJob.JobId
                 if ($currentJobId -in $jobExecutionResults.JobId) {
